@@ -1,158 +1,173 @@
-
 // 顏色變量
-$primary: rgba(41, 59, 41, 0.8);;
-$secondary:rgba(52, 55, 59, 0.8);
+$primary: rgba(41, 59, 41, 0.8);
+$secondary: rgba(52, 55, 59, 0.8);
 $success: #ff7600;
 $info: #b1ff00;
 
 .wrapper {
-  width: 350px;
-  height: 350px;
+  width: 262.5px; // 调整后的宽度
+  height: 262.5px; // 调整后的高度
   background-color: $secondary;
-  border-radius: 72px;
+  border-radius: 54px; // 调整后的边角半径
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 7.5px; // 调整后的内边距
 }
+
 .clock {
-  width: 300px;
-  height: 300px;
+  width: 225px; // 调整后的宽度
+  height: 225px; // 调整后的高度
   background-color: $primary;
   border-radius: 100%;
-  border: 3px solid #212f0b;
+  border: 2.25px solid #212f0b; // 调整后的边框
   box-sizing: border-box;
   position: relative;
+
   &-hour {
     position: absolute;
     z-index: 1;
     top: 50%;
     left: 50%;
-    width: 8px;
-    height: 72px;
-    border-radius: 4px 4px 0 0;
+    width: 6px; // 调整后的宽度
+    height: 54px; // 调整后的高度
+    border-radius: 3px 3px 0 0; // 调整后的边角半径
     transform: translateX(-50%);
     transform-origin: top left;
     background-color: #fff;
+
     &::before {
       content: "";
       position: absolute;
-      left: 3px;
-      bottom: 5px;
-      width: 2px;
-      height: 25px;
+      left: 2.25px; // 调整后的位置
+      bottom: 3.75px; // 调整后的位置
+      width: 1.5px; // 调整后的宽度
+      height: 18.75px; // 调整后的高度
       background-color: $primary;
     }
   }
+
   &-minute {
     position: absolute;
     z-index: 2;
     top: 50%;
     left: 50%;
-    width: 8px;
-    height: 90px;
-    border-radius: 4px;
+    width: 6px; // 调整后的宽度
+    height: 67.5px; // 调整后的高度
+    border-radius: 3px; // 调整后的边角半径
     transform: translateX(-50%);
     transform-origin: top left;
     background-color: $success;
+
     &::before {
       content: "";
       position: absolute;
-      top: 3px;
-      left: 2px;
-      width: 4px;
-      height: 4px;
-      border-radius: 4px;
+      top: 2.25px; // 调整后的位置
+      left: 1.5px; // 调整后的位置
+      width: 3px; // 调整后的宽度
+      height: 3px; // 调整后的高度
+      border-radius: 3px; // 调整后的边角半径
       background: white;
     }
+
     &::after {
       content: "";
       position: absolute;
-      top: 7px;
-      left: 3px;
-      width: 2px;
-      height: 40px;
+      top: 5.25px; // 调整后的位置
+      left: 2.25px; // 调整后的位置
+      width: 1.5px; // 调整后的宽度
+      height: 30px; // 调整后的高度
       background: white;
     }
   }
+
   &-second {
     position: absolute;
     z-index: 3;
     top: 50%;
     left: 50%;
-    width: 15px;
-    height: 120px;
+    width: 11.25px; // 调整后的宽度
+    height: 90px; // 调整后的高度
     transform: translateX(-50%);
     transform-origin: top left;
   }
 }
+
 .pointer {
   position: relative;
+
   &-1 {
     position: absolute;
-    top: 3px;
-    left: 7.5px;
-    width: 2px;
-    height: 50px;
-    border-radius: 2px 2px 0 0;
+    top: 2.25px; // 调整后的位置
+    left: 5.625px; // 调整后的位置
+    width: 1.5px; // 调整后的宽度
+    height: 37.5px; // 调整后的高度
+    border-radius: 1.5px 1.5px 0 0; // 调整后的边角半径
     transform: translateX(-50%); //rotate(60deg);
     transform-origin: top;
     background: $info;
   }
+
   &-2 {
     position: absolute;
-    top: 52px;
-    left: 7.5px;
-    width: 2px;
-    height: 10px;
-    border-radius: 2px 2px 0 0;
+    top: 39px; // 调整后的位置
+    left: 5.625px; // 调整后的位置
+    width: 1.5px; // 调整后的宽度
+    height: 7.5px; // 调整后的高度
+    border-radius: 1.5px 1.5px 0 0; // 调整后的边角半径
     transform: translateX(-50%) rotate(-30deg);
     transform-origin: top;
     background: $info;
   }
+
   &-3 {
     position: absolute;
-    top: 60px;
-    left: 13px;
-    width: 2px;
-    height: 20px;
-    border-radius: 2px 2px 0 0;
+    top: 45px; // 调整后的位置
+    left: 9.75px; // 调整后的位置
+    width: 1.5px; // 调整后的宽度
+    height: 15px; // 调整后的高度
+    border-radius: 1.5px 1.5px 0 0; // 调整后的边角半径
     transform: translateX(-50%) rotate(30deg);
     transform-origin: top;
     background: $info;
   }
+
   &-4 {
     position: absolute;
-    top: 77px;
-    left: 3px;
-    width: 2px;
-    height: 6px;
-    border-radius: 2px 2px 0 0;
+    top: 57.75px; // 调整后的位置
+    left: 2.25px; // 调整后的位置
+    width: 1.5px; // 调整后的宽度
+    height: 4.5px; // 调整后的高度
+    border-radius: 1.5px 1.5px 0 0; // 调整后的边角半径
     transform: translateX(-50%) rotate(-45deg);
     transform-origin: top;
     background: $info;
   }
+
   &-5 {
     position: absolute;
-    top: 80px;
-    left: 7px;
-    width: 2px;
-    height: 40px;
-    border-radius: 2px 2px 0 0;
+    top: 60px; // 调整后的位置
+    left: 5.25px; // 调整后的位置
+    width: 1.5px; // 调整后的宽度
+    height: 30px; // 调整后的高度
+    border-radius: 1.5px 1.5px 0 0; // 调整后的边角半径
     transform: translateX(-50%);
     transform-origin: top;
     background: $info;
   }
+
   &-6 {
     position: absolute;
-    top: 120px;
-    left: 7px;
-    width: 5px;
-    height: 5px;
-    border-radius: 5px;
-    border: 1px solid $info;
+    top: 90px; // 调整后的位置
+    left: 5.25px; // 调整后的位置
+    width: 3.75px; // 调整后的宽度
+    height: 3.75px; // 调整后的高度
+    border-radius: 3.75px; // 调整后的边角半径
+    border: 0.75px solid $info; // 调整后的边框
     transform: translateX(-50%);
     transform-origin: top;
     background: transparent;
+
     &::before {
       content: "";
       position: absolute;
@@ -161,13 +176,14 @@ $info: #b1ff00;
       left: 0;
       right: 0;
       margin: auto;
-      width: 3px;
-      height: 3px;
-      border-radius: 5px;
+      width: 2.25px; // 调整后的宽度
+      height: 2.25px; // 调整后的高度
+      border-radius: 3.75px; // 调整后的边角半径
       background: $info;
     }
   }
 }
+
 .clock-scale {
   position: absolute;
   top: 0;
@@ -175,28 +191,31 @@ $info: #b1ff00;
   left: 0;
   right: 0;
   margin: auto;
-  width: 1px;
-  height: 240px;
+  width: 0.75px; // 调整后的宽度
+  height: 180px; // 调整后的高度
   background-color: $primary;
+
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    width: 2px;
-    height: 2px;
-    border-radius: 2px;
+    width: 1.5px; // 调整后的宽度
+    height: 1.5px; // 调整后的高度
+    border-radius: 1.5px; // 调整后的边角半径
     background-color: white;
   }
+
   &::after {
     content: "";
     position: absolute;
     bottom: 0;
-    width: 2px;
-    height: 2px;
-    border-radius: 2px;
+    width: 1.5px; // 调整后的宽度
+    height: 1.5px; // 调整后的高度
+    border-radius: 1.5px; // 调整后的边角半径
     background-color: white;
   }
 }
+
 .hour-scale {
   position: absolute;
   top: 0;
@@ -204,71 +223,77 @@ $info: #b1ff00;
   left: 0;
   right: 0;
   margin: auto;
-  width: 1px;
-  height: 240px;
-  font-size: 12px;
+  width: 0.75px; // 调整后的宽度
+  height: 180px; // 调整后的高度
+  font-size: 9px; // 调整后的字体大小
+
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    width: 2px;
-    height: 15px;
+    width: 1.5px; // 调整后的宽度
+    height: 11.25px; // 调整后的高度
     transform: translateY(-50%);
     background-color: $success;
   }
+
   &::after {
     content: "";
     position: absolute;
     bottom: 0;
-    width: 2px;
-    height: 15px;
+    width: 1.5px; // 调整后的宽度
+    height: 11.25px; // 调整后的高度
     transform: translateY(50%);
     background-color: $success;
   }
+
   .inside-nums {
     position: absolute;
-    top: 15px;
-    left: -2.5px;
+    top: 11.25px; // 调整后的位置
+    left: -1.875px; // 调整后的位置
     color: white;
+
     &-opposite {
       position: absolute;
-      bottom: 15px;
-      left: -2.5px;
+      bottom: 11.25px; // 调整后的位置
+      left: -1.875px; // 调整后的位置
       color: white;
-    }
-  }
-  .outside-nums {
-    position: absolute;
-    top: -25px;
-    left: -5px;
-    color: white;
-    //transform: translate(-50%, -25px);
-    &-opposite {
-      position: absolute;
-      bottom: -25px;
-      left: -5px;
-      color: white;
-      //transform: translate(-50%, 25px);
     }
   }
 
-  .highlight{
-    span{
+  .outside-nums {
+    position: absolute;
+    top: -23.75px; // 调整后的位置
+    left: -3.15px; // 调整后的位置
+    color: white;
+
+    &-opposite {
+      position: absolute;
+      bottom: -23.75px; // 调整后的位置
+      left: -3.15px; // 调整后的位置
+      color: white;
+    }
+  }
+
+  .highlight {
+    span {
       color: $info; /* 這裡設置突出顯示的顏色 */
-      animation: breathe 2s  ease-in-out infinite;
+      animation: breathe 2s ease-in-out infinite;
     }
   }
 }
 
 @for $i from 1 through 36 {
-  @if ($i%5==0) {
+  @if ($i % 5 == 0) {
     //如果在小時線和星星上就不顯示刻度
     .clock-scale:nth-child(#{$i}) {
       transform: rotate(#{$i * 6}deg);
+
       &::before {
         width: 0;
         height: 0;
       }
+
       &:after {
         width: 0;
         height: 0;
@@ -281,15 +306,13 @@ $info: #b1ff00;
   }
 }
 
-
-
 @keyframes breathe {
   0%, 100% {
-    font-size: 20px;
+    font-size: 15px; // 调整后的字体大小
     opacity: 1;
   }
   50% {
-    font-size: 20px;
+    font-size: 15px; // 调整后的字体大小
     opacity: 0.5;
   }
 }

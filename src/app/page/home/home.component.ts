@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { faCoffee, faDatabase, faC, faCode } from '@fortawesome/free-solid-svg-icons';
 import { faAngular, faGithub, faHtml5, faPython, faJs, } from '@fortawesome/free-brands-svg-icons';
 import { animate, group, query, state, style, transition, trigger } from '@angular/animations';
@@ -78,4 +78,5 @@ export class HomeComponent implements OnInit {
       this.carouselJob()
     }, time)
   }
+
 }
