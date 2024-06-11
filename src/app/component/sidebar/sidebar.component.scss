@@ -1,0 +1,87 @@
+
+@import 'src/styles.scss';
+.sidebar-wrapper {
+
+    .menu{
+        background-color:#404059;
+        border-radius: 80px;
+    }
+    ul{
+        list-style: none;
+        padding: 20px 0px;
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.active mat-icon{
+                color: $purple;
+            }
+        }
+        li:nth-child(n+2) {
+            margin-top: 20px; 
+        }
+    }
+
+    .logo{
+
+        .logo-img{
+            width: 85px;
+            height: 85px;
+        }
+        
+    }
+
+    
+    .logo-cd {
+        background-color: #05100E;
+        border-radius: 60px;
+        height:  250px;
+        width: 85px;
+        margin-bottom: 10px;
+        .avatar{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-top: 5px;
+        }
+        
+        .deck {
+            border: 1px solid  #cccbc8;
+            height: 1px;
+            width: 100%;
+        }
+
+        mat-icon{
+            color: $normal
+        }
+        
+    }
+
+    
+    mat-icon{
+        color: #cccbc8;
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+        &:hover{
+            cursor: pointer;
+            color: $sky-blue;
+        }
+    }
+
+
+    @media (min-width:995px) and (max-width: 1400px) {
+        .logo-cd{
+            height:  150px;
+            .avatar{
+                width: 50px;
+                height: 50px;
+            }
+            width: 55px;
+        }
+    }
+
+}
+
+
+

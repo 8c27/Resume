@@ -1,0 +1,13 @@
+.wrapper{
+    height: 100vh;
+    padding: 10px;
+    .clock-wrapper{
+        background-color: aqua;
+        flex: 0 0 50%;
+    }
+    .date-wrapper{
+        background-color: azure;
+        flex: 0 0 50%
+    }
+
+}

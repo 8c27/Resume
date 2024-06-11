@@ -1,0 +1,25 @@
+
+<div class="sidebar-wrapper">
+    <div class="menu d-grid justify-content-center" style="justify-items: center;">
+        <div class="logo">
+            <img class="logo-img" src="assets/img/logo.png">
+        </div>
+        <ul>
+            <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}}">
+                <mat-icon class="meun-link d-flex justify-content-center" [routerLink]="[menuItem.path]">{{menuItem.icon}}</mat-icon>
+            </li>
+        </ul>
+        <div class="logo-cd">
+            <div class="d-grid justify-content-center" style="height: 100%;">
+                <img class="avatar" src="assets/img/avatar.jpg">
+                <div class="deck"></div>
+                <div class="cd-play d-flex  justify-content-center">
+                    <mat-icon>disc_full</mat-icon>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="switch d-grid justify-content-center" style="justify-items: center;"></div>
+</div>  

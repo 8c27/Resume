@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'material-icons/iconfont/material-icons.scss';
+@import 'animate.css';
+*{
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'NotoSansSC';
+    src: url('/assets/NotoSansSC-Regular.ttf');
+}
+
+// 顏色變量 light-mode - dark-mode
+$purple: #9122FF;  
+$pink: #FC4965;
+$ice-blue: #AAD9F1;
+$normal: #FBFBFF;
+$green: #D2F10D;
+$sky-blue: #00FFE8;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.sc {
+    font-family: 'NotoSansSC';;
+}
+
+.d-grid {
+    display: grid;
+}

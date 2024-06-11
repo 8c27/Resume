@@ -1,0 +1,134 @@
+@import 'src/styles.scss';
+.wrapper{
+    height: 100vh;
+    // background-image: url('/assets/img/asy.jpg');
+    background-repeat: no-repeat;
+    background-position: center 10%;
+    background-size: auto;
+    padding: 10px;
+    .resume-wrapper{
+        height: 60%;
+        flex: 0 0 60%;
+        h1{
+            line-height: 1.2;
+            font-weight: bold;
+        }
+        .left-box{
+            height: 80%;
+            padding: 15px;
+            background-color: rgba(52, 55, 59, 0.8);
+            border-radius: 30px;
+        }
+        .overflow-y {
+            overflow-y: auto;
+        }
+    }
+    
+    .skill-wrapper{
+        height: 40%;
+        flex: 0 0 40%;
+        .skill label{
+            margin-bottom: 5px;
+            min-width: 80px 
+        }
+        .icon {
+            min-width: 20px 
+        }
+        .progress{
+            background: #ddd;
+            height: 10px;
+            width: 200px;
+            border-radius: 5px;
+        }
+        .progress-bar{
+            background: $green;
+            height: 100%;
+            border-radius: 5px;
+        }
+        .right-box{
+            height: 80%;
+            padding: 15px;
+            border-radius: 30px;
+            background-color: rgba(5, 16, 14, 0.8);
+            overflow: hidden;
+        }
+
+        .left-box{
+            min-height: 65%;
+            max-height: 80%;
+            padding: 15px;   
+            background-color: rgba(5, 16, 14, 0.8);
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+    }
+
+    // @media (min-width: 991px) {
+    //     .resume-wrapper{
+    //         height: 60%;
+    //     }
+    //     .skill-wrapper{
+    //         height: 40%;
+    //     }
+    // }
+}
+
+// 小螢幕的尺寸
+@media (max-width: 991px) {
+    .wrapper {
+        height: auto;
+        gap: 10px;
+    }
+    .resume-wrapper, .skill-wrapper{
+        height: auto;
+        flex: 0 0 auto;
+        gap: 10px;
+    }
+    .skill-wrapper{
+        .left-box {
+            width: 100%;
+            .progress {
+                width: 260px;
+            }
+        }
+        .right-box {
+            width: 100%;
+            height: 300px !important;
+        }
+    }
+}
+
+.card {
+    color: #FBFAFF;
+    background-color: transparent;
+    border: none;
+}
+
+.progress-font {
+    margin-left: 20px;
+}
+.job-switch{
+    gap: 5px;
+    margin-left: 5px;
+}
+
+.job-btn{
+    cursor: pointer;
+    border: 2px solid $purple;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    label{
+        cursor: pointer;
+    }
+    &:hover{
+        border-color: $green;
+    }
+}
+
+.job-active {
+    border-color: $ice-blue !important; /* 激活状态时的边框颜色 */
+}
