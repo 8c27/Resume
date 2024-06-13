@@ -1,13 +1,24 @@
+@import 'src/styles.scss';
 .wrapper{
     height: 100vh;
     padding: 10px;
-    .clock-wrapper{
-        background-color: aqua;
-        flex: 0 0 50%;
-    }
+
     .date-wrapper{
+        background-color: aqua;
+        flex: 0 0 60%;
+    }
+
+    .other-wrapper{
         background-color: azure;
-        flex: 0 0 50%
+        flex: 0 0 40%;
+        padding: 10px;
+        .picture-container{
+            padding: 15px;
+            overflow: hidden;
+            background-color: rgba(5, 16, 14, 0.8);
+            border-radius: 30px;
+            height: 90%;
+        }
     }
 
 }

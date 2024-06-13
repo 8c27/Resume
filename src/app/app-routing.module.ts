@@ -4,6 +4,7 @@ import { AdminLayoutComponent } from 'src/layouts/admin-layout/admin-layout.comp
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home', pathMatch:'full'},
   { path: '', component: AdminLayoutComponent, children: [{
     path: '', loadChildren: () => import('src/layouts/admin-layout/admin-layout.module').then( m => m.AdminLayoutModule)
   }]}

@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./other-bar.component.scss']
 })
 export class OtherBarComponent {
-
+  
+  selected: Date | null = null;
 }

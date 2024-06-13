@@ -12,6 +12,10 @@ import { DemoComponent } from './page/demo/demo.component';
 import { ClockComponent } from './component/clock/clock.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { OtherBarComponent } from './component/other-bar/other-bar.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +33,10 @@ import { OtherBarComponent } from './component/other-bar/other-bar.component';
     BrowserAnimationsModule,
     MatIconModule,
     FontAwesomeModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
