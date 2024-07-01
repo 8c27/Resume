@@ -50,7 +50,7 @@ export class ClockComponent implements OnInit {
     // 轉換為12小時制
     this.hour = hour % 12;
     this.hour = this.hour ? this.hour : 12; // the hour '0' should be '12'
-    console.log(this.hour)
+
   }
 
 }

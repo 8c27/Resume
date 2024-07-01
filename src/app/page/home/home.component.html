@@ -1,4 +1,4 @@
-<div class="wrapper sc d-flex" style="flex-direction: column;">
+<div class="wrapper sc d-flex"  [ngStyle]="{'background-image': 'url(' + backgroundUrl + ')'}"  style="flex-direction: column;">
     <div class="col-12 resume-wrapper d-flex align-items-center">
         <div class="col-lg-4 col-md-12 animate__bounceIn left-box overflow-y">
             <div class="card">
@@ -35,10 +35,6 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4 d-flex flex-row-reverse clock animate__bounceIn" style="align-self: flex-start; margin-top: 50px">
-            <app-clock></app-clock>
-        </div>
     </div>
 
     <div class="col-12 skill-wrapper d-flex align-items-center flex-column flex-md-row" >
@@ -51,9 +47,9 @@
                         <fa-icon class="icon" [icon]="faAngular"></fa-icon>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar" style="width: 70%;"></div>
+                        <div class="progress-bar" style="width: 50%;"></div>
                     </div>
-                    <div class="progress-font">70%</div>
+                    <div class="progress-font">50%</div>
                 </div>
                 <div class="skill d-flex align-items-center">
                     <div class="process-title d-flex">
@@ -84,9 +80,9 @@
                     </div>
                 
                     <div class="progress">
-                        <div class="progress-bar" style="width: 30%;"></div>
+                        <div class="progress-bar" style="width: 40%;"></div>
                     </div>
-                    <div class="progress-font">30%</div>
+                    <div class="progress-font">40%</div>
                 </div>
                 <div class="skill d-flex align-items-center">
                     <div class="process-title d-flex">
@@ -106,9 +102,9 @@
                     </div>
           
                     <div class="progress">
-                        <div class="progress-bar" style="width: 40%;"></div>
+                        <div class="progress-bar" style="width: 60%;"></div>
                     </div>
-                    <div class="progress-font">40%</div>
+                    <div class="progress-font">60%</div>
                 </div>
             </div>
         </div>
@@ -151,7 +147,6 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

@@ -1,11 +1,14 @@
 @import 'src/styles.scss';
 .wrapper{
     height: 100vh;
-    // background-image: url('/assets/img/asy.jpg');
     background-repeat: no-repeat;
     background-position: center 10%;
     background-size: auto;
     padding: 10px;
+
+    ::-webkit-scrollbar{
+        width: 5px;
+    }
     .resume-wrapper{
         height: 60%;
         flex: 0 0 60%;
@@ -63,15 +66,6 @@
         }
 
     }
-
-    // @media (min-width: 991px) {
-    //     .resume-wrapper{
-    //         height: 60%;
-    //     }
-    //     .skill-wrapper{
-    //         height: 40%;
-    //     }
-    // }
 }
 
 .progress-font {

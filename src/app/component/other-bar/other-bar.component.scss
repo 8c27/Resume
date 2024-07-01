@@ -3,22 +3,119 @@
     height: 100vh;
     padding: 10px;
 
-    .date-wrapper{
-        background-color: aqua;
-        flex: 0 0 60%;
-    }
+    background-color: #404059;
 
-    .other-wrapper{
-        background-color: azure;
-        flex: 0 0 40%;
+    .date-wrapper{
+        height: 60%;
+        flex: 0 0 60%;
         padding: 10px;
-        .picture-container{
-            padding: 15px;
-            overflow: hidden;
-            background-color: rgba(5, 16, 14, 0.8);
-            border-radius: 30px;
+        .contact-box{
             height: 90%;
+            padding: 15px;
+            border-radius: 30px;
+            background-color: rgba(5, 16, 14, 0.8);
+            overflow: hidden;
+
+            .contact-item{
+                height: 100%;
+            }
+
+            .clock{
+                margin-top: 10px;
+            }
         }
     }
 
+    .other-wrapper{
+        flex: 0 0 40%;
+        height: 40%;
+        padding: 10px;
+        .picture-box{
+            height: 90%;
+            padding: 15px;
+            border-radius: 30px;
+            background-color: rgba(5, 16, 14, 0.8);
+            overflow: hidden;
+
+            .picture-item{
+                height: 100%;
+            }
+
+            .picture img{
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .ctrl-btn{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+.circle{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid var(--clr);
+    margin: 5px;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--clr);
+        border-radius: 50%;
+        opacity: 0;
+        transform: scale(0);
+        transition: transform 0.9s ease-in, opacity 0.3 ease;
+    }
+    &:hover::before{
+        transform: scale(3);
+        opacity: 1;
+    }
+
+    .circle-icon{
+        font-size: 24px;
+        font-weight: 100;
+        z-index: 2  ;
+    }
+}
+
+
+/* 手機視窗 */
+@media (max-width: 768px) {
+    .mobile{
+        display: none;
+    }
+
+    .wrapper{
+        .date-wrapper{
+            flex: 0 0 40%;
+        }
+        .other-wrapper{
+            flex: 0 0 60%;
+        }
+    }
+}
+
+/*筆電*/
+@media (max-width:1560px) {
+    .clock{
+        scale: 85%;
+        position: relative;
+        top: -25px;
+    }
 }

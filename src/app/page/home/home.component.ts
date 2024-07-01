@@ -3,6 +3,7 @@ import { faCoffee, faDatabase, faC, faCode } from '@fortawesome/free-solid-svg-i
 import { faAngular, faGithub, faHtml5, faPython, faJs, } from '@fortawesome/free-brands-svg-icons';
 import { animate, group, query, state, style, transition, trigger } from '@angular/animations';
 import { timeInterval } from 'rxjs';
+import { BackgroundService } from 'src/app/services/background.service';
 
 
 @Component({
@@ -35,16 +36,21 @@ export class HomeComponent implements OnInit {
    faPython = faPython
    faJs = faJs
    faCode = faCode
-
+  
   job: string = 'section1';
   activeBtn: string = 'section1'; // 跟踪当前点击的按钮
   carouselTime: number = 10000;
   intervalId : any;
+  backgroundUrl: string = '/assets/img/asy.jpg';
 
-  constructor(){}
+
+  constructor(public bgSvc: BackgroundService){}
 
   ngOnInit(): void {
     this.carouselJob()
+    this.bgSvc.background$.subscribe( e => {
+      this.backgroundUrl = e
+    })
   }
 
   ngOnDestroy(): void {

@@ -16,12 +16,10 @@
                 <span class="inner-nums">{{ scale.insideOpposite }}</span>
             </span>
             <span class="outside-nums" 
-                  [ngClass]="{'highlight': scale.outside == hour}" 
                   [ngStyle]="{'transform': 'rotate(' + ((index + 1) * -30) + 'deg)'}">
                   <span class="inner-nums">{{ scale.outside }}</span>
             </span>
-            <span class="outside-nums-opposite" 
-                  [ngClass]="{'highlight': scale.outsideOpposite == hour}" 
+            <span class="outside-nums-opposite"  
                   [ngStyle]="{'transform': 'rotate(' + ((index + 1) * -30) + 'deg)'}">
                   <span class="inner-nums">{{ scale.outsideOpposite }}</span>
             </span>

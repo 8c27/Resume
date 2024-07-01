@@ -11,12 +11,13 @@
     }
   
     .other {
-      order: -1; 
+      order: 2; 
       width: 100%;
       height: auto;
     }
   
     .main {
+      order: 1;
       width: 100%;
     }
   
